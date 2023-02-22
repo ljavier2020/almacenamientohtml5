@@ -16,14 +16,14 @@ function comenzar(){
 }
 
 function clickando() {
-    
+    let icono = document.getElementById("audio");
     if((miaudio.paused==false) && (miaudio.ended==false)){
         miaudio.pause();
-       reproducir.innerHTML='<img src="images/audio.png">'; 
+        icono.src='images/audio.png'; 
        bucle=setInterval(estado,30);
     }else{
         miaudio.play();
-        reproducir.innerHTML='<img src="images/Audio-mute.png">';
+        icono.src='images/Audio-mute.png';
     }
    
 }
